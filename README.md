@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Start Server
+Run `npm run build:server` to build and `npm run start:server` to run the server(http://localhost:3000)
+
+##TODO:
+1. Logging,
+2. https
+3. Prod
+4. Version APIs

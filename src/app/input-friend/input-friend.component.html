@@ -1,0 +1,23 @@
+<form class="example-form">
+
+    <table class="example-full-width" cellspacing="0">
+        <tr>
+            <td>
+                <mat-form-field class="example-full-width">
+                    <mat-label>User Name</mat-label>
+                    <input #user1input matInput value="akhilsomething">
+                </mat-form-field>
+            </td>
+            <td>
+                <button (click)="mutualFriends(user1input.value, user2input.value)" mat-raised-button color="primary">Mutual Friends</button>
+            </td>
+            <td>
+                <mat-form-field class="example-full-width">
+                    <mat-label>User Name</mat-label>
+                    <input #user2input matInput value="MuttalKadavul">
+                </mat-form-field>
+            </td>
+        </tr>
+    </table>
+</form>
+<app-mutual-friends [dataSource]="dataSource"></app-mutual-friends>
