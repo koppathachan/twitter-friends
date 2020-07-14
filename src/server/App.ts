@@ -17,7 +17,7 @@ export class App {
         this.app.set("port", process.env.PORT || 3000)
         this.app.use(cors({
             //TODO
-            origin: "http://localhost:4200"
+            // origin: "http://localhost:4200"
         }))
         this.app.use(
             express.static("dist/twitter-friends")

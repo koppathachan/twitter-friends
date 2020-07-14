@@ -292,8 +292,8 @@ export class MutualFriendsService {
     const csv = (ids: string[]) => ids.length == 1 && ids[0].toString() || (ids[0].toString() + ',' + csv(ids.slice(1)))
     //TODO: paginate
     //@ts-ignore
-    return this.http.get(`http://localhost:3000/friends/mutual?user1=${user1}&user2=${user2}`, {})
-      .pipe(switchMap(((ids: string[]) => this.http.get(`http://localhost:3000/friends/show?ids=${csv(ids.slice(0, 100))}`))))
+    return this.http.get(`${window.origin}/friends/mutual?user1=${user1}&user2=${user2}`, {})
+      .pipe(switchMap(((ids: string[]) => this.http.get(`${window.origin}/friends/show?ids=${csv(ids.slice(0, 100))}`))))
       .pipe(switchMap((arr: string[]) => from(arr)))
     // .subscribe(res => console.log(res))
   }
